@@ -2,7 +2,13 @@
 @import "modules/mixin";
 
 body {
-  background: var(--primary-color);
+  background: $bg;
   font-size: $font-md;
-  @include font-figtree-black();
+  @include kanit-regular();
+}
+
+
+h1 {
+  @include kanit-regular();
+  font-size: $font-lg;
 }

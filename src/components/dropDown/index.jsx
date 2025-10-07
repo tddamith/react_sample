@@ -1,13 +1,12 @@
 import React from "react";
-import "./styles.scss";
 
-const Test = ({ data, onClick }) => {
+const Index = ({ data, onClick }) => {
   return (
     <>
       <div className="cw__verify-wrapper">
-
+            <h1>Hello Team-2</h1>
       </div>
     </>
   );
 };
-export default Test;
+export default Index;
