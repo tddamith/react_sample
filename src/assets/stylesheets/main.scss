@@ -1,0 +1,8 @@
+@import "modules/variable";
+@import "modules/mixin";
+
+body {
+  background: var(--primary-color);
+  font-size: $font-md;
+  @include font-figtree-black();
+}
