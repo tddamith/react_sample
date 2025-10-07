@@ -1,11 +1,13 @@
 import './App.css';
-import {DropDownComponent, TestComponent} from './components';
+import {DropDownComponent, TestComponent, SingIn} from './components';
 
 function App() {
   return (
       <div className="App">
-        <TestComponent/>
-        <DropDownComponent/>
+      
+        <SingIn/>
+        
+        
       </div>
   );
 }
