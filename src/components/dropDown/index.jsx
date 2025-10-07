@@ -4,7 +4,7 @@ const Index = ({ data, onClick }) => {
   return (
     <>
       <div className="cw__verify-wrapper">
-            <h1>Hello Team-2</h1>
+      
       </div>
     </>
   );
