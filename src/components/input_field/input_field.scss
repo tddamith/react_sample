@@ -1,0 +1,37 @@
+@use '../../assets/stylesheets/modules/variable' as *;
+@use '../../assets/stylesheets/modules/mixin' as *;
+
+.input-container {
+  @include kanit-regular;
+  width: 100%;
+  max-width: 400px; // Set a max-width for better layout control
+  margin-left: 1cm;
+  
+}
+
+.input-label {
+  display: block; // Ensures the label is on its own line
+  font-size: 14px;
+  font-weight: 400;
+  margin-bottom: 8px; // Space between label and input
+  margin-right: 8.5cm;
+  line-height: 100%;
+  
+}
+
+.text-input {
+  width: 320px;
+  height: 48px;
+  padding: 12px 16px; // Vertical and horizontal padding
+  font-size: 16px;
+  border: 1px solid ;
+  border-radius: 13px; // Creates the rounded corners
+  box-sizing: border-box; // Ensures padding and border are included in the width
+  
+  color: $box-color;
+  margin-right: 8.5cm;
+
+  
+  
+}
+
