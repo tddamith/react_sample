@@ -1,0 +1,40 @@
+@use '../../assets/stylesheets/modules/mixin' as *;
+
+.gradient-btn {
+  @include kanit-regular(); 
+  font-weight: 600; 
+  font-size: 14px;
+
+  /* Layout */
+  position: absolute;  
+  top: 284px;
+  left: 35px;
+  width: 320px;
+  height: 55px; 
+  border-radius: 13px;
+
+  /* Padding */
+  padding-top: 17px;
+  padding-bottom: 17px;
+
+  /* Visuals */
+  background: linear-gradient(90deg, #a07b7b 0%, #7e3cf7 100%);
+  border: none;
+  color: #fff;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 12px rgba(126, 60, 247, 0.3);
+  display: inline-block;
+//   margin-right: 900px; 
+//   align-self: flex-start;
+
+  &:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 14px rgba(126, 60, 247, 0.4);
+  }
+
+  &:active {
+    transform: translateY(0);
+    box-shadow: 0 2px 8px rgba(126, 60, 247, 0.3);
+  }
+}
