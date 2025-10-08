@@ -1,5 +1,5 @@
 import './App.css';
-import {DropDownComponent, TestComponent, SingIn, Button, InputField} from './components';
+import {DropDownComponent, TestComponent, SingIn, Button, InputField, CloseButton} from './components';
 
 function App() {
   return (
@@ -9,6 +9,7 @@ function App() {
         <SingIn/>
         <Button/>
         <InputField/>
+        <CloseButton/>
       </div>
   );
 }
