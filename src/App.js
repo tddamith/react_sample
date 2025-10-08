@@ -1,5 +1,5 @@
 import './App.css';
-import {DropDownComponent, TestComponent, SingIn} from './components';
+import {DropDownComponent, TestComponent, SingIn, Button} from './components';
 
 function App() {
   return (
@@ -7,6 +7,7 @@ function App() {
         <DropDownComponent/>
         <TestComponent/>
         <SingIn/>
+        <Button/>
       </div>
   );
 }
