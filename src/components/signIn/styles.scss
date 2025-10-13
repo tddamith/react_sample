@@ -1,0 +1,26 @@
+@use '../../assets/stylesheets/modules/variable' as *;
+@use '../../assets/stylesheets/modules/mixin' as *;
+
+.signin {
+  background: $bg;
+
+.signin_container {
+    width: 350px;
+    padding: 2rem;
+    text-align: left;
+  }
+ 
+  .signin_title {
+    @include Kalnia-bold();
+    font-size: $font-lg;
+    margin-bottom: -20px;
+  }
+ 
+.signin_subtitle {
+    @include Kalnia-extralight();
+    font-size: $font-md;
+    color: $secondary-text-color;
+    margin-bottom: 1.5rem;
+  }
+ 
+}
