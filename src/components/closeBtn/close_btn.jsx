@@ -1,9 +1,9 @@
 import "./styles.scss";
 
-const CloseBtn = () => {
+const CloseBtn = (props) => {
     return (
         <div className="closeBtn">
-            <span className="close_span">x</span>
+            <span className="close_span">{props.icon}</span>
         </div>
     );
 };

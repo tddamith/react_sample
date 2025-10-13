@@ -12,3 +12,14 @@ h1 {
   @include kanit-regular();
   font-size: $font-lg;
 }
+
+h2{
+  @include kanit-regular();
+  font-size: $font-lg;
+  margin: 0;
+  padding: 0;
+}
+p{
+  margin: 0;
+  padding: 0;
+}
