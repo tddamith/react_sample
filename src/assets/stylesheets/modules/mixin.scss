@@ -1,3 +1,5 @@
+@use "./variable.scss" as var;
+
 //font family
 @mixin kanit-thin() {
   font-family: "Kanit", sans-serif;
@@ -29,3 +31,14 @@
   font-style: normal;
 }
 
+@mixin button-size($size) {
+  $props: map-get(var.$btn-sizes, $size);
+  @if $props == null {
+    @error "Undefined button size: `#{$size}` in $btn-sizes map.";
+  }
+  width: map-get($props, width);
+  height: map-get($props, height);
+  padding-top: map-get($props, 'padding-top');
+  padding-bottom: map-get($props, 'padding-bottom');
+  border-radius: var.$border-radius;
+}

@@ -4,16 +4,52 @@ $secondary-text-color: #9FA7C3;
 $box-color: #D8D6E7;
 $closeBtn-bg: #EEE8FB;
 $btn-primary-bg: linear-gradient(90deg, #a07b7b 0%, $primary-color 100%);
+$btn-secondary-bg : rgba(126, 60, 247, 0.1);
+$text-white: #F5F2FF;
+$primary-box-shadow:0 4px 12px rgba(126, 60, 247, 0.3);
+$p-hover-box-shadow: 0 6px 14px rgba(126, 60, 247, 0.4);
+$p-active-box-shadow: 0 2px 8px rgba(126, 60, 247, 0.3);
+$secondary-hover-bg: rgba(126, 60, 247, 0.15);
+$secondary-active-bg:rgba(126, 60, 247, 0.2);
+$disabled-bg: #E0E0E0;
 
-$text-white:#F5F2FF;
+    
 
 
+// font sizes
 $font-xxs: 12px;
 $font-sm: 14px;
 $font-md: 16px;
 $font-lg: 24px;
 $font-xxl: 34px;
 
-$border-radius-lg: 20px;
-$border-radius-md: 16px;
-$border-radius-sm: 12px;
+// border radius
+$border-radius: 13px;
+
+// button sizes map
+$btn-sizes: (
+  lg: (
+    width: 320px,
+    height: 55px,
+    padding-top: 17px,
+    padding-bottom: 17px,
+  ),
+  md: (
+    width: 201px,
+    height: 39px,
+    padding-top: 9px,
+    padding-bottom: 9px,
+  ),
+  sm: (
+    width: 115px,
+    height: 31px,
+    padding-top: 5px,
+    padding-bottom: 5px,
+  ),
+  disabled: (
+    width: 115px,
+    height: 31px,
+    padding-top: 5px,
+    padding-bottom: 5px,
+  )
+);
