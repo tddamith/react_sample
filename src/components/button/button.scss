@@ -1,31 +1,21 @@
 @use '../../assets/stylesheets/modules/mixin' as *;
 @use '../../assets/stylesheets/modules/variable' as *;
 
-.gradient-btn {
+.btn-primary {
   @include kanit-regular(); // Kanit font base
   font-weight: 600; // Semi-bold
   font-size: $font-sm; // 14px from variables
-
-  /* Layout */
-  position: absolute;  
-  top: 284px;
-  left: 35px;
-  width: 320px;
-  height: 55px;
-  border-radius: 13px;
-
-  /* Padding */
-  padding-top: 17px;
-  padding-bottom: 17px;
-
-  /* Colors & Effects */
-  background: linear-gradient(90deg, #a07b7b 0%, $primary-color 100%);
-  color: $bg;
-  border: none;
+  width: 100px;
   cursor: pointer;
+  border-radius: 13px;
+ 
   box-shadow: 0 4px 12px rgba(126, 60, 247, 0.3);
   display: inline-block;
   transition: all 0.3s ease;
+  border: 0;
+  color: $text-white;
+  &.primary{background: $btn-primary-bg;}
+  &.secondary{}
 
   &:hover {
     transform: translateY(-2px);
@@ -35,5 +25,21 @@
   &:active {
     transform: translateY(0);
     box-shadow: 0 2px 8px rgba(126, 60, 247, 0.3);
+  }
+
+  &.lg {
+    height: 45px;
+    border-radius: $border-radius-lg;
+
+  }
+
+  &.md {
+    height: 35px;
+    border-radius: $border-radius-md;
+  }
+
+  &.sm {
+    height: 25px;
+    border-radius: $border-radius-sm;
   }
 }
