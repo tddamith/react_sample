@@ -1,45 +1,56 @@
 @use '../../assets/stylesheets/modules/mixin' as *;
 @use '../../assets/stylesheets/modules/variable' as *;
 
-.btn {
-  @include kanit-regular(); // Kanit font base
-  font-weight: 600; // Semi-bold
-  font-size: $font-sm; // 14px from variables
-  width: 100px;
+.btn-primary {
+  @include kanit-regular();
+  font-weight: 600;
+  font-size: $font-sm;
   cursor: pointer;
-  border-radius: 13px;
-
-  box-shadow: 0 4px 12px rgba(126, 60, 247, 0.3);
+  border: none;
   display: inline-block;
   transition: all 0.3s ease;
-  border: 0;
-  color: $text-white;
-  &.primary{background: $btn-primary-bg;}
-  &.secondary{}
+  gap: 10px;
+  opacity: 1;
 
-  &:hover {
-    transform: translateY(-2px);
-    box-shadow: 0 6px 14px rgba(126, 60, 247, 0.4);
+  // primary variant
+  &.primary {
+    background: $btn-primary-bg;
+    color: $text-white;
+    box-shadow: $primary-box-shadow;
+
+    &:hover {
+      transform: translateY(-2px);
+      box-shadow:$p-hover-box-shadow;
+    }
+    &:active {
+      transform: translateY(0);
+      box-shadow:$p-active-box-shadow
+    }
   }
 
-  &:active {
-    transform: translateY(0);
-    box-shadow: 0 2px 8px rgba(126, 60, 247, 0.3);
+  // secondary variant
+  &.secondary {
+    background: $btn-secondary-bg;
+    color: $primary-color;
+
+    &:hover {
+      background:$secondary-hover-bg;
+    }
+    &:active {
+      background: $secondary-active-bg;
+    }
   }
 
-  &.lg {
-    height: 45px;
-    border-radius: $border-radius-lg;
-
+  // disabled variant
+  &.disabled {
+    background: $disabled-bg;
+    box-shadow: none;
+    opacity: 1;
+    pointer-events: none;
   }
 
-  &.md {
-    height: 35px;
-    border-radius: $border-radius-md;
-  }
-
-  &.sm {
-    height: 25px;
-    border-radius: $border-radius-sm;
-  }
+  // size variants (generated from mixin)
+  &.lg { @include button-size(lg); }
+  &.md { @include button-size(md); }
+  &.sm { @include button-size(sm); }
 }
