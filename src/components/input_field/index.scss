@@ -1,0 +1,59 @@
+@use '../../assets/stylesheets/modules/variable' as *;
+@use '../../assets/stylesheets/modules/mixin' as *;
+
+.input-container {
+  @include kanit-regular;
+  width: 100%;
+  max-width: 320px; // Set a max-width for better layout control
+  margin-bottom: 20px;
+
+}
+
+.input-label {
+  display: block; // Ensures the label is on its own line
+  font-size: $font-sm;
+  font-weight: 400;
+  margin-bottom: 8px; // Space between label and input
+  line-height: 100%;
+}
+
+.text-input {
+  border: 1px solid $box-color;
+  border-radius: $border-radius; // Creates the rounded corners
+  box-sizing: border-box; // Ensures padding and border are included in the width
+  color: $box-color;
+
+  @include input-size(lg);
+
+  &::placeholder {
+    color: $secondary-text-color; // Style for the placeholder text
+  }
+
+  &.md {
+    @include input-size(md);
+  }
+  &.sm {
+    @include input-size(sm);
+  }
+
+  &:disabled {
+    cursor: not-allowed;
+    background-color: $disabled-bg; 
+    border-color: $disabled-bg; 
+    color: $secondary-text-color; 
+    opacity: 0.8; 
+  }
+
+}
+
+.text-input.error {
+  border-color: #FF0000; // Red border for error
+  outline: none; // Remove default outline
+}
+
+.error-message {
+  font-size: $font-sm;
+  color: #FF0000; // Red text for error message
+  margin-top: 4px;
+}
+

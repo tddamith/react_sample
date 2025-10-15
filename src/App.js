@@ -1,5 +1,5 @@
 import './App.css';
-import {Button, CloseButton, DropDownComponent, InputField, SingIn, TestComponent} from './components';
+import {Button, CloseButton, DropDownComponent, Textbox, SingIn, TestComponent} from './components';
 
 import {GetIcon} from "./config/icon";
 
@@ -31,8 +31,47 @@ function App() {
       </div>
     </div>
           
-          <InputField name={'firstName'}/>
-          <InputField name={'lastName'}/>
+          <div style={{ padding: '20px' , display: 'flex', flexDirection: 'column', alignItems: 'flex-start'}}> {/* Container for inputs */}
+             {/* Input with Error State (like the first image) */}
+             <Textbox 
+                name={'firstNameError'} 
+                label={'First name'} 
+                size={'lg'}
+                error={'Error goes here..'} 
+             />
+
+             {/* Large Input Field */}
+             <Textbox 
+                name={'firstNameLg'} 
+                label={'First name'} 
+                size={'lg'}
+             />
+
+             {/* Medium Input Field */}
+             <Textbox 
+                name={'firstNameMd'} 
+                label={'Email address'} 
+                size={'md'}
+             />
+
+             {/* Small Input Field */}
+             <Textbox 
+                name={'firstNameSm'} 
+                label={'Password'} 
+                size={'sm'}
+             />
+
+             {/* 5. Disabled Input Field (LG size, for example) */}
+              <Textbox 
+                  name={'disabledField'} 
+                  label={'Disabled Field'} 
+                  size={'sm'}
+                  placeholder={'Type here...'}
+                  value={'Cannot be changed'} 
+                  disabled={true} 
+              />
+             
+          </div>
           <CloseButton icon={GetIcon('close')}/>
       </div>
   );

@@ -12,6 +12,7 @@ $p-active-box-shadow: 0 2px 8px rgba(126, 60, 247, 0.3);
 $secondary-hover-bg: rgba(126, 60, 247, 0.15);
 $secondary-active-bg:rgba(126, 60, 247, 0.2);
 $disabled-bg: #E0E0E0;
+$border-radius: 13px;
 
     
 
@@ -53,3 +54,22 @@ $btn-sizes: (
     padding-bottom: 5px,
   )
 );
+
+// Input sizes map
+$input-sizes: (
+  lg: (
+    padding: 12px 16px, 
+    font-size: 16px,
+  ),
+  md: (
+    padding: 10px 14px, 
+    font-size: 14px,
+  ),
+  sm: (
+    padding: 8px 12px, 
+    font-size: 14px,
+  )
+);
+
+$font-xxs: 12px;
+$font-sm: 14px;
