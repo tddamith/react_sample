@@ -42,3 +42,12 @@
   padding-bottom: map-get($props, 'padding-bottom');
   border-radius: var.$border-radius;
 }
+
+@mixin input-size($size) {
+  $props: map-get(var.$input-sizes, $size);
+  @if $props == null {
+    @error "Undefined input size: `#{$size}` in $input-sizes map.";
+  }
+  padding: map-get($props, padding);
+  font-size: map-get($props, font-size);
+}
