@@ -1,0 +1,103 @@
+// // Adjusted path to go up two levels (from src/template) into src/, then into assets/stylesheets/
+// @use "../assets/stylesheets/modules/variable.scss" as var; 
+// @use "../assets/stylesheets/modules/mixin.scss" as mixin; 
+
+// .sign-in-form-container {
+//   display: flex;
+//   justify-content: center;
+//   align-items: center;
+//   width: 100%;
+//   min-height: 80vh; /* Ensures vertical centering on a page */
+//   padding: 20px;
+// }
+
+// .sign-in-card {
+//   display: flex;
+//   flex-direction: column;
+//   gap: 20px; /* Spacing between title, inputs, and button */
+  
+//   width: 100%;
+//   max-width: 400px; /* Maximum width for the form card */
+//   padding: 40px;
+  
+//   background-color: var.$bg;
+//   border-radius: var.$border-radius;
+//   box-shadow: var.$primary-box-shadow;
+// }
+
+// .text-content {
+//   margin-bottom: 20px;
+// }
+
+// .title {
+//   @include mixin.Kalnia-bold(); /* Assuming you want the bold Kalnia font for the title */
+//   font-size: var.$font-xxl;
+//   color: var.$primary-color;
+//   margin-bottom: 5px;
+// }
+
+// .subtitle {
+//   @include mixin.kanit-extralight(); /* Lighter font for the subtitle */
+//   font-size: var.$font-md;
+//   color: var.$secondary-text-color;
+//   margin-bottom: 0;
+// }
+
+// .input-group {
+//   width: 100%;
+// }
+
+// .button-group {
+//     width: 100%;
+//     margin-top: 10px;
+    
+//     // Ensure the button itself takes up the full width defined by the parent
+//     & > button {
+//         width: 100%; 
+//     }
+// }
+
+@use "../assets/stylesheets/modules/variable.scss" as var;
+@use "../assets/stylesheets/modules/mixin.scss" as mixin;
+
+.sign-in-form-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  min-height: 80vh;
+  padding: 20px;
+}
+
+.sign-in-card {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  width: 100%;
+  max-width: 400px;
+  padding: 40px;
+  background-color: var.$bg;
+  border-radius: var.$border-radius;
+  box-shadow: var.$primary-box-shadow;
+}
+
+.text-content {
+  width: 100%;
+  margin-bottom: 20px;
+  transition: all 0.3s ease;
+}
+
+.title {
+  @include mixin.Kalnia-bold();
+  font-size: var.$font-xxl;
+  color: var.$primary-color;
+  margin: 0;
+}
+
+.subtitle {
+  @include mixin.kanit-extralight();
+  font-size: var.$font-md;
+  color: var.$secondary-text-color;
+  margin: 0;
+}
+

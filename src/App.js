@@ -1,6 +1,6 @@
 import './App.css';
-import {Button, IconButton, DropDownComponent, Textbox, SingIn, TestComponent} from './components';
-
+import {Button, IconButton, DropDownComponent, Textbox, TestComponent} from './components';
+import SignInForm from './template/signInForm';
 import {GetIcon} from "./config/icon";
 
 function App() {
@@ -8,8 +8,14 @@ function App() {
       <div className="App">
           <DropDownComponent/>
           <TestComponent/>
-          <div className={'mb-4'}>
-              <SingIn isSubTitle={true}/>
+          <div className={'mb-4' } style={{display: 'flex'}}>
+              <SignInForm
+                  title="Welcome Back!"
+                  subtitle="Please sign in to continue"
+                  direction="column"
+                  textAlign="start"
+                  gap="12px"
+                  />
           </div>
            <div className="App" style={{ display: 'flex', justifyContent: 'flex-start', marginTop: '40px' }}>
       {/* Primary Buttons */}
