@@ -1,5 +1,5 @@
 import './App.css';
-import {Button, CloseButton, DropDownComponent, Textbox, SingIn, TestComponent} from './components';
+import {Button, IconButton, DropDownComponent, Textbox, SingIn, TestComponent} from './components';
 
 import {GetIcon} from "./config/icon";
 
@@ -71,9 +71,15 @@ function App() {
                   disabled={true} 
               />
              
-          </div>
-          <CloseButton icon={GetIcon('close')}/>
-      </div>
+        </div>
+        <IconButton size="sm" icon={GetIcon('close')} />
+        <IconButton size="md" icon={GetIcon('close')} />
+        <IconButton size="lg" icon={GetIcon('close')} />
+
+        <IconButton size="sm" iconColor="red" icon={GetIcon('close')} />
+        <IconButton size="md" iconColor="dark" icon={GetIcon('close')} />
+        <IconButton size="lg" iconColor="gradient" icon={GetIcon('close')} />
+        </div>
   );
 }
 

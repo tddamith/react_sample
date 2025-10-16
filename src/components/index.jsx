@@ -3,7 +3,7 @@ import DropDownComponent from "./dropDown";
 import SingIn from "./signIn/signin";
 import Button from "./button";
 import Textbox from "./textbox/textbox";
-import CloseButton from "./closeBtn/close_btn";
+import IconButton from "./iconBtn/iconBtn";
 
 export {
   TestComponent,
@@ -11,5 +11,5 @@ export {
   SingIn,
   Button,
   Textbox,
-  CloseButton,
+  IconButton,
 };

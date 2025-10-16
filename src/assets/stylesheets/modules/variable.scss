@@ -2,7 +2,7 @@ $primary-color: #7E3CF7;
 $bg: #FFFFFF;
 $secondary-text-color: #9FA7C3;
 $box-color: #D8D6E7;
-$closeBtn-bg: #EEE8FB;
+$iconBtn-bg: #EEE8FB;
 $btn-primary-bg: linear-gradient(90deg, #a07b7b 0%, $primary-color 100%);
 $btn-secondary-bg : rgba(126, 60, 247, 0.1);
 $text-white: #F5F2FF;
@@ -73,3 +73,32 @@ $input-sizes: (
 
 $font-xxs: 12px;
 $font-sm: 14px;
+
+$iconBtn-sizes: (
+  sm:(
+    width: 32px,
+    height: 32px,
+    icon-size: 16px
+  ),
+  md:(
+    width: 45px,
+    height: 45px,
+    icon-size: 24px
+  ),
+  lg:(
+    width: 60px,
+    height: 60px,
+    icon-size: 34px
+  ),
+  disabled:(
+    width: 16px,
+    height: 16px,
+    icon-size: 8px
+  )
+);
+
+$iconBtn-color: (
+  red: #FF5C5C,
+  dark: #5A00FF,
+  gradient: linear-gradient(90deg, #9E7783 0%, #8040F1 100%)
+);

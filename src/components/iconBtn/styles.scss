@@ -1,0 +1,65 @@
+//  @use '../../assets/stylesheets/modules/variable' as *;
+
+
+//  .iconBtn {
+//   background: $iconBtn-bg;
+//   width: map-get(map-get($iconBtn-sizes, lg), width);
+//   height: map-get(map-get($iconBtn-sizes, lg), height);
+//   border-radius: 50%;
+//   display: flex;
+//   align-items: center;
+//   justify-content: center;
+//   border: none;
+//  }
+
+//  .iconBtn_span {
+//   display: flex;
+//   align-items: center;
+//   justify-content: center;
+
+//   svg {
+//     width: map-get(map-get($iconBtn-sizes, lg), icon-size);
+//     height: map-get(map-get($iconBtn-sizes, lg), icon-size);
+//   }
+//  }
+@use '../../assets/stylesheets/modules/variable' as *;
+
+.iconBtn {
+  background: $iconBtn-bg;
+  border: none;
+  border-radius: 50%;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+
+  // loop through sizes
+  @each $name, $values in $iconBtn-sizes {
+    &--#{$name} {
+      width: map-get($values, width);
+      height: map-get($values, height);
+
+      .iconBtn_span svg {
+        width: map-get($values, icon-size);
+        height: map-get($values, icon-size);
+      }
+    }
+  }
+
+  &:hover {
+    background: lighten($iconBtn-bg, 10%);
+  }
+
+  // loop through colors
+  @each $colorName, $colorValue in $iconBtn-color {
+    &--#{$colorName} {
+      background: $colorValue;
+    }
+  }
+}
+
+.iconBtn_span {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
